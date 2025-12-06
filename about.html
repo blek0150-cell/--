@@ -1,0 +1,232 @@
+<!DOCTYPE html> 
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Про мене – REVIVE by Svetlana</title>
+
+<!-- Преміальні шрифти -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+:root {
+  --bg1: #e8d8ff;
+  --bg2: #f8f0ff;
+  --text: #3A2E50;
+  --glass: rgba(255,255,255,0.35);
+  --glass-border: rgba(255,255,255,0.6);
+}
+
+/* Фон */
+body {
+  margin: 0;
+  padding: 2rem;
+  font-family: "Raleway", sans-serif;
+  background: linear-gradient(135deg, var(--bg1), var(--bg2));
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  animation: fadeBg 1.5s ease forwards;
+}
+
+@keyframes fadeBg {
+  from {opacity: 0; filter: blur(12px);}
+  to   {opacity: 1; filter: blur(0);}
+}
+
+/* Меню */
+nav {
+  display: flex;
+  gap: 1.4rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 14px;
+  margin-bottom: 2rem;
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+
+  opacity: 0;
+  animation: menuIn 1s forwards;
+}
+
+@keyframes menuIn {
+  from {opacity: 0; transform: translateY(-10px);}
+  to   {opacity: 1; transform: translateY(0);}
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: 0.25s ease;
+  font-family: "Raleway", sans-serif;
+}
+
+nav a:hover {
+  transform: translateY(-2px);
+  text-shadow: 0 0 6px white;
+}
+
+/* Контейнер */
+.container {
+  max-width: 950px;
+  padding: 2rem;
+  border-radius: 22px;
+  background: rgba(255,255,255,0.45);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 6px 25px rgba(0,0,0,0.18);
+
+  opacity: 0;
+  animation: mainFade 1.3s forwards;
+}
+
+@keyframes mainFade {
+  from {opacity: 0; transform: translateY(20px);}
+  to   {opacity: 1; transform: translateY(0);}
+}
+
+/* Заголовки */
+h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.6rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 12px rgba(255,255,255,0.7);
+}
+
+/* Секція */
+.section {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+}
+
+/* Фото */
+.photo {
+  width: 260px;
+  height: 340px;
+  border-radius: 20px;
+  background: url("q.jpg") center/cover;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+
+  animation: floatPhoto 6s ease-in-out infinite;
+}
+
+@keyframes floatPhoto {
+  0%   {transform: translateY(0);}
+  50%  {transform: translateY(-6px);}
+  100% {transform: translateY(0);}
+}
+
+/* Текст */
+.text {
+  max-width: 500px;
+  font-size: 1.17rem;
+  line-height: 1.6;
+  font-family: "Raleway", sans-serif;
+
+  animation: slideIn 1.3s ease forwards;
+  opacity: 0;
+}
+
+@keyframes slideIn {
+  from {opacity: 0; transform: translateX(25px);}
+  to   {opacity: 1; transform: translateX(0);}
+}
+
+/* Дипломи */
+.diplomas {
+  display: flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Картки */
+.diploma {
+  width: 260px;
+  height: 170px;
+  border-radius: 14px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 6px 22px rgba(0,0,0,0.18);
+  transition: 0.3s;
+}
+
+.diploma:hover {
+  transform: scale(1.05);
+}
+
+.diploma1 { background-image: url("3.jpg"); }
+.diploma2 { background-image: url("6.jpg"); }
+.diploma3 { background-image: url("7.jpg"); }
+
+</style>
+</head>
+
+<body>
+
+<nav>
+  <a href="index.html">Головна</a>
+  <a href="about.html">Про мене</a>
+  <a href="services.html">Послуги і ціни</a>
+  <a href="Blog.html">Блог</a>
+  <a href="contakt.html">Контакти</a>
+</nav>
+
+<div class="container">
+
+  <h1>Про майстра</h1>
+
+  <div class="section">
+
+    <div class="photo"></div>
+
+    <div class="text">
+      Мене звати Світлана Петрич. Я сертифікований масажист-реабілітолог,
+      профі-масажист та інструктор з фізичної реабілітації.
+
+      <br><br>
+
+      Закінчила Академію професійної освіти спеціалістів індустрії краси
+      «Партнер Плюс», де пройшла кілька спеціалізованих програм:
+
+      <br><br>
+
+      • Масажі обличчя: класичний, ексклюзивний, пластичний, масаж по Жаке  
+      • Масажист-інструктор з фізичної реабілітації  
+      • Програма «ПРОФІ-МАСАЖИСТ»
+
+      <br><br>
+
+      Я поєдную класичні та реабілітаційні техніки, працюю м’яко, делікатно,
+      безболісно й завжди з індивідуальним підходом.
+
+      <br><br>
+
+      Для мене масаж — це не просто робота.  
+      Це спосіб допомагати людям повертати здоров’я, легкість і спокій.
+    </div>
+
+  </div>
+
+  <h1 style="font-size:2rem; margin-bottom:1.5rem;">Мої дипломи</h1>
+
+  <div class="diplomas">
+    <div class="diploma diploma1"></div>
+    <div class="diploma diploma2"></div>
+    <div class="diploma diploma3"></div>
+  </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html> 
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Контакти - REVIVE by Svetlana</title>
+
+<!-- Преміальні шрифти -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg1: #e8d8ff;
+  --bg2: #f8f0ff;
+  --text: #3A2E50;
+  --glass: rgba(255,255,255,0.35);
+  --glass-border: rgba(255,255,255,0.6);
+}
+
+body {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  background: linear-gradient(135deg, var(--bg1), var(--bg2));
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+
+  animation: fadeBg 1.5s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeBg {
+  from {opacity: 0; filter: blur(12px);}
+  to   {opacity: 1; filter: blur(0);}
+}
+
+/* Меню */
+nav {
+  display: flex;
+  gap: 1.4rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 14px;
+  margin-bottom: 2rem;
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+
+  opacity: 0;
+  animation: menuIn 1s forwards;
+}
+
+@keyframes menuIn {
+  from {opacity: 0; transform: translateY(-10px);}
+  to   {opacity: 1; transform: translateY(0);}
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: 0.25s ease;
+  font-family: "Raleway", sans-serif;
+}
+
+nav a:hover {
+  transform: translateY(-2px);
+  text-shadow: 0 0 6px white;
+}
+
+/* Контейнер */
+.container {
+  max-width: 900px;
+  width: 100%;
+  background: rgba(255,255,255,0.45);
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,0.6);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 6px 25px rgba(0,0,0,0.15);
+  padding: 2rem;
+
+  opacity: 0;
+  animation: fadeInBlock 1.3s forwards;
+}
+
+@keyframes fadeInBlock {
+  from {opacity: 0; transform: translateY(20px);}
+  to   {opacity: 1; transform: translateY(0);}
+}
+
+/* Заголовки */
+h1 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  font-family: "Playfair Display", serif;
+  text-shadow: 0 0 10px rgba(255,255,255,0.7);
+}
+
+h2 {
+  font-family: "Playfair Display", serif;
+  margin-top: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Кнопка */
+.button {
+  display: inline-block;
+  padding: 10px 22px;
+  margin: 10px 0;
+  background-color: #a974ff;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: 0.3s;
+  font-family: "Raleway", sans-serif;
+}
+
+.button:hover {
+  background-color: #7e4cff;
+  transform: translateY(-2px);
+}
+
+/* Карта */
+iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
+  border-radius: 16px;
+  margin-top: 12px;
+}
+</style>
+</head>
+<body>
+
+<!-- Меню -->
+<nav>
+  <a href="index.html">Головна</a>
+  <a href="about.html">Про мене</a>
+  <a href="services.html">Послуги і ціни</a>
+  <a href="Blog.html">Блог</a>
+  <a href="contakt.html">Контакти</a>
+</nav>
+
+<div class="container">
+  <h1>Контакти та запис</h1>
+
+  <p>Мій масажний кабінет знаходиться в м. Київ, вул. Регенераторна 4, корпус 4, під’їзд 4 (ЖК Комфорт Таун).</p>
+  
+  <p>Телефон / Viber / Telegram:  
+    <a href="tel:+380501615076">+380 50 161 50 76</a>
+  </p>
+  
+  <p>Instagram:  
+    <a href="https://instagram.com/revive_by_svetlana" target="_blank">@revive_by_svetlana</a>
+  </p>
+  
+  <p>Онлайн-запис:</p>
+  <a class="button" href="https://bookon.ua/revive?utm_source=ig&utm_medium=social&utm_content=link_in_bio" target="_blank">Записатися онлайн</a>
+
+  <h2>Карта</h2>
+  <iframe src="https://maps.google.com/maps?q=23FazGry1vzM7oNe6&output=embed"></iframe>
+
+  <h2>Графік роботи</h2>
+  <p>Пн–Ср–Пт–Сб: 08:00 – 22:00</p>
+  <p>За попереднім записом!</p>
+</div>
+
+</body>
+</html>
