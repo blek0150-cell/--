@@ -94,7 +94,7 @@ nav a:hover {
 .photo {
   width: 100%;
   max-width: 260px;
-  aspect-ratio: 260 / 340;
+  aspect-ratio: 3 / 4;
   border-radius: 20px;
   background: url("12344.jpg") center center / cover no-repeat;
   box-shadow: 0 8px 25px rgba(0,0,0,0.25);
@@ -138,6 +138,34 @@ p {
 @keyframes textFade {
   from {opacity: 0; transform: translateX(25px);}
   to   {opacity: 1; transform: translateX(0);}
+}
+
+/* ===== АДАПТИВ ДЛЯ ТЕЛЕФОНІВ ===== */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .photo {
+    max-width: 240px;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
 }
 
 </style>
