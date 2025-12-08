@@ -1,41 +1,80 @@
-<!DOCTYPE html> 
+
+<!DOCTYPE html>
 <html lang="uk">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Послуги та прайс - REVIVE by Svetlana</title>
 
-<!-- Преміальні шрифти -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 :root {
-  --bg1: #e8d8ff;
-  --bg2: #f8f0ff;
+  --bg: #f8f0ff;
   --text: #3A2E50;
-  --glass: rgba(255,255,255,0.45);
-  --glass-border: rgba(255,255,255,0.6);
 }
 
-/* ===== СТИЛЬ СТОРІНКИ ===== */
 body {
   margin: 0;
   font-family: "Raleway", sans-serif;
-  background: linear-gradient(135deg, var(--bg1), var(--bg2));
+  background: var(--bg);
   color: var(--text);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  line-height: 1.6;
   padding: 2rem;
-  animation: fadeBg 1.6s ease forwards;
 }
 
-@keyframes fadeBg {
-  from {filter: blur(12px); opacity: 0;}
-  to   {filter: blur(0); opacity: 1;}
+h1, h2, h3 {
+  font-family: "Playfair Display", serif;
 }
 
-/* ===== МЕНЮ ===== */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+.section.reverse {
+  flex-direction: row-reverse;
+}
+
+.section img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 15px;
+  object-fit: cover;
+  flex: 1 1 300px;
+}
+
+.section .text {
+  flex: 1 1 500px;
+}
+
+.underline {
+  border-bottom: 1px solid #aaa;
+  margin: 1rem 0;
+}
+
+ul {
+  margin-left: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .section {
+    flex-direction: column !important;
+    gap: 20px;
+  }
+  .section img, .section .text {
+    flex: 1 1 100%;
+  }
+}
+  /* ===== МЕНЮ ===== */
 nav {
   display: flex;
   gap: 1.4rem;
@@ -69,82 +108,6 @@ nav a:hover {
   text-shadow: 0 0 6px white;
 }
 
-/* ===== КОНТЕЙНЕР ===== */
-.container {
-  max-width: 900px;
-  width: 100%;
-  background: var(--glass);
-  border-radius: 22px;
-  border: 1px solid var(--glass-border);
-  backdrop-filter: blur(18px);
-  box-shadow: 0 6px 25px rgba(0,0,0,0.15);
-  padding: 2rem;
-  margin-bottom: 2rem;
-
-  opacity: 0;
-  animation: contentIn 1.4s ease forwards;
-}
-
-@keyframes contentIn {
-  from {opacity: 0; transform: translateY(20px);}
-  to   {opacity: 1; transform: translateY(0);}
-}
-
-/* ===== ТЕКСТ ===== */
-
-h1 {
-  font-size: 2.4rem;
-  margin-bottom: 1rem;
-  text-shadow: 0 0 12px rgba(255,255,255,0.7);
-  font-family: "Playfair Display", serif;
-  text-align: center;
-}
-
-h2 {
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
-  text-decoration: underline;
-  font-family: "Playfair Display", serif;
-}
-
-h3 {
-  margin-top: 1rem;
-  margin-bottom: 0.3rem;
-  font-family: "Playfair Display", serif;
-}
-
-p, li {
-  font-family: "Raleway", sans-serif;
-  line-height: 1.55;
-  font-size: 1.12rem;
-}
-
-.underline {
-  border-bottom: 1px solid #aaa;
-  margin: 1.3rem 0;
-}
-
-ul {
-  margin-left: 1.2rem;
-  margin-bottom: 1rem;
-}
-
-.button {
-  display: inline-block;
-  padding: 10px 22px;
-  margin: 10px 0;
-  background-color: #a974ff;
-  color: white;
-  font-weight: 600;
-  text-decoration: none;
-  border-radius: 10px;
-  transition: 0.3s;
-  font-family: "Raleway", sans-serif;
-}
-
-.button:hover {
-  background-color: #7e4cff;
-}
 </style>
 </head>
 
@@ -162,46 +125,71 @@ ul {
 <div class="container">
   <h1>Послуги та прайс</h1>
 
-  <p>Усі масажі проводяться в затишному кабінеті в Комфорт Таун. Я працюю тільки з якісними маслами та приділяю максимум уваги вашому комфорту й безпеці. Ціни актуальні, оновлення – на 2025 рік.</p>
-  
-  <h2>3.1 Масажі для тіла</h2>
+  <!-- Загальний масаж тіла -->
+  <div class="section">
+    <img src="34.jpg" alt="Загальний масаж тіла">
+    <div class="text">
+      <h2>Загальний масаж тіла</h2>
+      <p><strong>Тривалість:</strong> 60/90 хв | <strong>Вартість:</strong> 1000 / 1400 грн</p>
+      <p>Охоплює спину, шию, руки, ноги, стопи. Підходить тим, хто відчуває загальну втому, напругу в м’язах, багато сидить чи стоїть протягом дня. Покращує кровообіг, знімає стрес, нормалізує сон.</p>
+      <p>Рекомендований курс: 1–2 рази на тиждень, 6–10 сеансів.</p>
+      <div class="underline"></div>
+    </div>
+  </div>
 
-  <h3>Загальний масаж тіла</h3>
-  <p>Тривалість: 60/90 хв | Вартість: 1000 / 1400 грн</p>
-  <p>Охоплює спину, шию, руки, ноги, стопи. Підходить тим, хто відчуває загальну втому, напругу в м’язах, багато сидить чи стоїть протягом дня. Покращує кровообіг, знімає стрес, нормалізує сон.</p>
-  <p>Рекомендований курс: 1–2 рази на тиждень, 6–10 сеансів.</p>
-  <div class="underline"></div>
+  <!-- Лімфодренажний масаж -->
+  <div class="section reverse">
+    <img src="46.jpg" alt="Лімфодренажний масаж">
+    <div class="text">
+      <h2>Лімфодренажний масаж</h2>
+      <p><strong>Тривалість:</strong> 60/90 хв | <strong>Вартість:</strong> 1000 / 1400 грн</p>
+      <p>М’який, але глибоко оздоровчий масаж, який активізує лімфотік, допомагає прибрати набряки, важкість у ногах, вивести зайву рідину з організму. Підходить при сидячому способі життя, після пологів, при схильності до набрякань.</p>
+      <p>Рекомендований курс: 8–12 процедур, 1–3 рази на тиждень.</p>
+      <div class="underline"></div>
+    </div>
+  </div>
 
-  <h3>Лімфодренажний масаж</h3>
-  <p>Тривалість: 60/90 хв | Вартість: 1000 / 1400 грн</p>
-  <p>М’який, але глибоко оздоровчий масаж, який активізує лімфотік, допомагає прибрати набряки, важкість у ногах, вивести зайву рідину з організму.</p>
-  <p>Рекомендований курс: 8–12 процедур, 1–3 рази на тиждень.</p>
-  <div class="underline"></div>
+  <!-- Антицелюлітний масаж -->
+  <div class="section">
+    <img src="56.jpg" alt="Антицелюлітний масаж">
+    <div class="text">
+      <h2>Антицелюлітний масаж</h2>
+      <p><strong>Тривалість:</strong> 60/90 хв | <strong>Вартість:</strong> 1000 / 1400 грн</p>
+      <p>Робота з проблемними зонами: стегна, сідниці, живіт. Допомагає зменшити прояви целюліту, покращити рельєф шкіри, підтягнути тіло. Масаж поєднує глибокі розминання, розігрів тканин, спеціальні прийоми для розблокування застійних зон.</p>
+      <p>Рекомендований курс: 10–15 процедур через день або 2–3 рази на тиждень.</p>
+      <div class="underline"></div>
+    </div>
+  </div>
 
-  <h3>Антицелюлітний масаж</h3>
-  <p>Тривалість: 60/90 хв | Вартість: 1000 / 1400 грн</p>
-  <p>Робота з проблемними зонами: стегна, сідниці, живіт. Допомагає зменшити прояви целюліту, покращити рельєф шкіри, підтягнути тіло.</p>
-  <p>Рекомендований курс: 10–15 процедур через день або 2–3 рази на тиждень.</p>
-  <div class="underline"></div>
+  <!-- Масаж спини -->
+  <div class="section reverse">
+    <img src="343.jpg" alt="Масаж спини">
+    <div class="text">
+      <h2>Масаж спини</h2>
+      <p><strong>Тривалість:</strong> 45 хв | <strong>Вартість:</strong> 800 грн</p>
+      <p>Сфокусований масаж на ділянці спини та шиї. Допомагає зняти напругу після сидячої роботи, зменшити головний біль напруження, полегшити стан при остеохондрозі.</p>
+      <p>Курс: 5–8 сеансів.</p>
+      <div class="underline"></div>
+    </div>
+  </div>
 
-  <h2>3.2 Локальні зони</h2>
-
-  <h3>Масаж спини</h3>
-  <p>Тривалість: 45 хв | Вартість: 800 грн</p>
-  <p>Сфокусований масаж на ділянці спини та шиї. Допомагає зняти напругу після сидячої роботи, зменшити головний біль напруження, полегшити стан при остеохондрозі.</p>
-  <div class="underline"></div>
-
-  <h2>⭐ Акції та абонементи</h2>
-  <p>Акція для нових клієнтів — “Знайомство з майстром”: отримайте –20% знижку на перший візит.</p>
-  <p>Абонемент на курс масажів — вигідніше разом! Бери курс із 7 масажів — отримуй 8-й у подарунок.</p>
-
-  <ul>
-    <li>✔ вигідніше, ніж оплачувати кожен візит окремо</li>
-    <li>✔ результат швидший завдяки регулярності</li>
-    <li>✔ можна комбінувати різні види масажу</li>
-    <li>✔ пріоритетний запис</li>
-    <li>✔ 8-й масаж — безкоштовно</li>
-  </ul>
+  <!-- Акції -->
+  <div class="section">
+    <div class="text">
+      <h2>⭐ Акції та абонементи</h2>
+      <p>Акція для нових клієнтів — “Знайомство з майстром”: отримайте –20% знижку на перший візит. Це чудова можливість познайомитися з майстром, оцінити комфорт, техніку та результат уже після першої процедури. Доступно для будь-якого виду масажу.</p>
+      <p>Абонемент на курс масажів — вигідніше разом! Бери курс із 7 масажів — отримуй 8-й у подарунок. Абонемент — це найкращий вибір для тих, хто хоче:</p>
+      <ul>
+        <li>✔ працювати з хронічним болем у спині чи шиї</li>
+        <li>✔ досягти видимого результату (антицелюліт, лімфодренаж, міофасціальна робота)</li>
+        <li>✔ підтримувати тіло в тонусі</li>
+        <li>✔ заощадити та отримати більше процедур за ті самі гроші</li>
+        <li>✔ пріоритетний запис у зручний час</li>
+        <li>✔ 8-й масаж — абсолютно безкоштовно</li>
+      </ul>
+      <p>Діє на всі масажі з прайсу.</p>
+    </div>
+  </div>
 
 </div>
 
