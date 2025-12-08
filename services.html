@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="uk">
 <head>
 <meta charset="UTF-8">
@@ -8,21 +8,89 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-nav {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  
-  position: sticky;
-  top: 0;
-  z-index: 100;
+:root {
+  --bg: #f8f0ff;
+  --text: #3A2E50;
+}
 
-  padding: 1rem 1.2rem;
-  background: rgba(255, 255, 255, 0.45);
-  backdrop-filter: blur(18px);
-  
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+body {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  padding: 2rem;
+}
+
+h1, h2, h3 {
+  font-family: "Playfair Display", serif;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+.section.reverse {
+  flex-direction: row-reverse;
+}
+
+.section img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 15px;
+  object-fit: cover;
+  flex: 1 1 300px;
+}
+
+.section .text {
+  flex: 1 1 500px;
+}
+
+.underline {
+  border-bottom: 1px solid #aaa;
+  margin: 1rem 0;
+}
+
+ul {
+  margin-left: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .section {
+    flex-direction: column !important;
+    gap: 20px;
+  }
+  .section img, .section .text {
+    flex: 1 1 100%;
+  }
+}
+  /* ===== МЕНЮ ===== */
+nav {
+  display: flex;
+  gap: 1.4rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 14px;
+  margin-bottom: 2rem;
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+  animation: navIn 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes navIn {
+  from {opacity: 0; transform: translateY(-15px);}
+  to   {opacity: 1; transform: translateY(0);}
 }
 
 nav a {
@@ -30,32 +98,20 @@ nav a {
   color: var(--text);
   font-weight: 600;
   font-size: 1.1rem;
-  padding: 0.4rem 0.8rem;
-  border-radius: 8px;
-  transition: all 0.25s ease;
+  transition: 0.25s;
+  font-family: "Raleway", sans-serif;
 }
 
 nav a:hover {
-  background: var(--accent);
-  color: #fff;
   transform: translateY(-2px);
+  text-shadow: 0 0 6px white;
 }
 
-@media (max-width: 768px) {
-  nav {
-    gap: 1rem;
-    padding: 0.8rem 0.6rem;
-  }
-  nav a {
-    font-size: 1rem;
-    padding: 0.35rem 0.6rem;
-  }
-}
 </style>
-
 </head>
 
 <body>
+
 <!-- Меню -->
 <nav>
   <a href="index.html">Головна</a>
@@ -106,7 +162,7 @@ nav a:hover {
 
   <!-- Масаж спини -->
   <div class="section reverse">
-    <img src=" " alt="Масаж спини">
+    <img src="c:\Users\Emil\OneDrive\Рабочий стол\Света\343.jpg" alt="Масаж спини">
     <div class="text">
       <h2>Масаж спини</h2>
       <p><strong>Тривалість:</strong> 45 хв | <strong>Вартість:</strong> 800 грн</p>
@@ -138,8 +194,5 @@ nav a:hover {
 
 </body>
 </html>
-
-
-
 
 
